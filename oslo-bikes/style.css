@@ -1,0 +1,60 @@
+
+html, body{
+    height: 100vh;
+    font-family: Helvetica, sans-serif;
+    /*background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,107,141,1) 0%, rgba(0,69,91,1) 90% );*/
+    /*background-image: linear-gradient( 109.6deg,  rgba(44,83,131,1) 18.9%, rgba(95,175,201,1) 91.1% );*/
+    background-image: linear-gradient( 112.1deg,  rgba(32,38,57,1) 11.4%, rgba(63,76,119,1) 70.2% );
+}
+
+#map {
+    height:  80vh; 
+    width: 100%;  
+   }
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    color: white;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    align-items: flex-end;
+}
+.leftheader{
+    font-size: 2rem;
+    font-family: 'Bungee Shade';
+    padding: 0;
+    margin: 0;
+    flex-basis: 50%;
+    text-align: left;
+}
+.subtitle{
+    font-size: 1rem;
+    font-family: Helvetica, sans-serif;
+}
+
+.rightheader{
+    flex-basis: 50%;
+    text-align: right;  
+}
+
+footer p{
+    font-size: 0.7rem;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: lightskyblue;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+
+
