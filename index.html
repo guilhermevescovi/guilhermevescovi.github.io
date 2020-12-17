@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guilherme V Nicchio</title>
     <link href="./styles/style.css" rel="stylesheet" />
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
 </head>
-<body>
-    <div id="main-body">
+<body id="main-body">
         <div id="app">
             <div id="wrapper">
                 <!-- Make sure data-text equals the text you put inside the tags. -->
                 <h1 class="glitch" data-text="guilherme v nicchio">guilherme v nicchio</h1>
-                <span class="sub">Dev and Design</span> 
+                <span class="sub">doing cool stuff</span> 
             </div>
 
             <footer id="footer">
-                <button class="btn draw-border m-scene">about</button>
+                <button id="about-btn" class="btn draw-border btn-move">about</button>
             </footer>
         </div>
-    </div>
+
+        <div id="slider">
+            Some content here....
+        </div>
+        <script src="./src/app.js"></script>
 </body>
 </html>
