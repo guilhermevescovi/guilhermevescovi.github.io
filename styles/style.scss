@@ -201,7 +201,7 @@ skew to change the 'thickness' of the glitch.*/
   cursor: pointer;
   line-height: 1.5;
   padding: 1em 1em 1em 2em;
-  letter-spacing: 1rem;
+  letter-spacing: 0.7rem;
   font-weight: bold;
 }
 button:focus {
@@ -380,3 +380,7 @@ button:focus {
   border-radius: 50%;
   margin: 0 2em 2em 0;
 }
+
+// #about-btn {
+//   letter-spacing: 0.5em;
+// }
