@@ -381,6 +381,18 @@ button:focus {
   margin: 0 2em 2em 0;
 }
 
-// #about-btn {
-//   letter-spacing: 0.5em;
-// }
+
+canvas {
+  background-color: transparent;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+#particles-js {
+  background-color: #f5f5f5;
+}
+
+.custom-cursor {
+  cursor: url('../img/cursor-small.png'), auto;
+}
