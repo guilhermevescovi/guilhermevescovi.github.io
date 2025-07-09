@@ -1,0 +1,324 @@
+/* Base styles */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+#wrapper {
+  height: 92.3354vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  background: linear-gradient(to right, #434343, #000000);
+  position: relative;
+  z-index: 10;
+}
+
+.sub {
+  color: rgb(100,220,220);
+  letter-spacing: 1em;
+}
+
+/* Glitch effect - Mobile first */
+.glitch {
+  position: relative;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: .2em;
+  animation: glitch-skew 2s infinite linear alternate-reverse;
+  word-break: break-word;
+  hyphens: auto;
+  max-width: 90vw;
+  text-align: center;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .glitch {
+    font-size: 2.5rem;
+    letter-spacing: .4em;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+  .glitch {
+    font-size: 3rem;
+    letter-spacing: .5em;
+  }
+}
+
+.glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: 100%;
+  height: 100%;
+  text-shadow: -2px 0 #ff00c1;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 3s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: -2px;
+  width: 100%;
+  height: 100%;
+  text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+  animation: glitch-anim2 2s infinite linear alternate-reverse;
+}
+
+/* Glitch animations */
+@keyframes glitch-anim {
+  0% { clip: rect(42px, 9999px, 44px, 0); transform: skew(0.85deg); }
+  5% { clip: rect(12px, 9999px, 59px, 0); transform: skew(0.4deg); }
+  10% { clip: rect(48px, 9999px, 29px, 0); transform: skew(0.3deg); }
+  15% { clip: rect(42px, 9999px, 73px, 0); transform: skew(0.5deg); }
+  20% { clip: rect(63px, 9999px, 27px, 0); transform: skew(0.9deg); }
+  25% { clip: rect(34px, 9999px, 55px, 0); transform: skew(0.2deg); }
+  30% { clip: rect(86px, 9999px, 73px, 0); transform: skew(0.8deg); }
+  35% { clip: rect(20px, 9999px, 20px, 0); transform: skew(1deg); }
+  40% { clip: rect(26px, 9999px, 60px, 0); transform: skew(0.6deg); }
+  45% { clip: rect(25px, 9999px, 85px, 0); transform: skew(0.1deg); }
+  50% { clip: rect(57px, 9999px, 90px, 0); transform: skew(0.7deg); }
+  55% { clip: rect(5px, 9999px, 46px, 0); transform: skew(0.3deg); }
+  60% { clip: rect(82px, 9999px, 31px, 0); transform: skew(0.9deg); }
+  65% { clip: rect(54px, 9999px, 27px, 0); transform: skew(0.4deg); }
+  70% { clip: rect(28px, 9999px, 99px, 0); transform: skew(0.6deg); }
+  75% { clip: rect(45px, 9999px, 69px, 0); transform: skew(0.8deg); }
+  80% { clip: rect(23px, 9999px, 85px, 0); transform: skew(0.2deg); }
+  85% { clip: rect(54px, 9999px, 84px, 0); transform: skew(0.9deg); }
+  90% { clip: rect(45px, 9999px, 47px, 0); transform: skew(0.6deg); }
+  95% { clip: rect(37px, 9999px, 20px, 0); transform: skew(0.4deg); }
+  100% { clip: rect(4px, 9999px, 91px, 0); transform: skew(0.52deg); }
+}
+
+@keyframes glitch-anim2 {
+  0% { clip: rect(65px, 9999px, 100px, 0); transform: skew(0.02deg); }
+  5% { clip: rect(52px, 9999px, 74px, 0); transform: skew(0.05deg); }
+  10% { clip: rect(79px, 9999px, 85px, 0); transform: skew(0.05deg); }
+  15% { clip: rect(75px, 9999px, 5px, 0); transform: skew(0.05deg); }
+  20% { clip: rect(67px, 9999px, 61px, 0); transform: skew(0.05deg); }
+  25% { clip: rect(14px, 9999px, 79px, 0); transform: skew(0.05deg); }
+  30% { clip: rect(1px, 9999px, 66px, 0); transform: skew(0.05deg); }
+  35% { clip: rect(86px, 9999px, 30px, 0); transform: skew(0.05deg); }
+  40% { clip: rect(23px, 9999px, 98px, 0); transform: skew(0.05deg); }
+  45% { clip: rect(85px, 9999px, 72px, 0); transform: skew(0.05deg); }
+  50% { clip: rect(39px, 9999px, 50px, 0); transform: skew(0.05deg); }
+  55% { clip: rect(24px, 9999px, 82px, 0); transform: skew(0.05deg); }
+  60% { clip: rect(46px, 9999px, 99px, 0); transform: skew(0.05deg); }
+  65% { clip: rect(50px, 9999px, 34px, 0); transform: skew(0.05deg); }
+  70% { clip: rect(79px, 9999px, 85px, 0); transform: skew(0.05deg); }
+  75% { clip: rect(42px, 9999px, 66px, 0); transform: skew(0.05deg); }
+  80% { clip: rect(63px, 9999px, 11px, 0); transform: skew(0.05deg); }
+  85% { clip: rect(37px, 9999px, 42px, 0); transform: skew(0.05deg); }
+  90% { clip: rect(68px, 9999px, 36px, 0); transform: skew(0.05deg); }
+  95% { clip: rect(7px, 9999px, 30px, 0); transform: skew(0.05deg); }
+  100% { clip: rect(17px, 9999px, 99px, 0); transform: skew(0.05deg); }
+}
+
+@keyframes glitch-skew {
+  0% { transform: skew(2deg); }
+  10% { transform: skew(-1deg); }
+  20% { transform: skew(1deg); }
+  30% { transform: skew(0deg); }
+  40% { transform: skew(1deg); }
+  50% { transform: skew(-1deg); }
+  60% { transform: skew(0deg); }
+  70% { transform: skew(1deg); }
+  80% { transform: skew(0deg); }
+  90% { transform: skew(-2deg); }
+  100% { transform: skew(1deg); }
+}
+
+/* Button styles */
+#footer {
+  background: none;
+  text-align: center;
+  position: fixed;
+  bottom: 2rem;
+  width: 100%;
+}
+
+.draw-border {
+  box-shadow: inset 0 0 0 2px #01c5c4;
+  color: white;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+}
+
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.draw-border::before {
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+}
+
+.draw-border::after {
+  border-top-width: 2px;
+  border-right-width: 2px;
+}
+
+.draw-border:hover {
+  color: #ff00c1;
+}
+
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: white;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+
+.draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  padding: 1em 1em 1em 2em;
+  letter-spacing: 0.7rem;
+  font-weight: bold;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Animation keyframes */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.btn-slideup {
+  animation-duration: 1s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-name: slideUp;
+}
+
+@keyframes slide-diagonal {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.wrapper-slideup-1 {
+  animation-duration: 200ms;
+  transition-timing-function: ease-in;
+  animation-fill-mode: none;
+  animation-name: slide-diagonal;
+}
+
+.wrapper-slideup-2 {
+  animation-duration: 400ms;
+  transition-timing-function: ease-in;
+  animation-fill-mode: none;
+  animation-name: slide-diagonal;
+}
+
+.wrapper-slideup-3 {
+  animation-duration: 800ms;
+  transition-timing-function: ease-in;
+  animation-fill-mode: none;
+  animation-name: slide-diagonal;
+}
+
+#about-wrapper-pink {
+  width: 100vw;
+  height: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  background-color: #ff00c1;
+  position: relative;
+  z-index: 1;
+}
+
+#about-wrapper-white {
+  width: 100vw;
+  height: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  background-color: #00fff9;
+  position: relative;
+  z-index: 2;
+}
+
+/* Typewriter animation */
+.typewriter {
+  color: rgb(100,220,220);
+  letter-spacing: 1em;
+  overflow: hidden;
+  border-right: .15em solid #ff00c1;
+  white-space: nowrap;
+  margin: 0.5em auto;
+  animation: 
+    typing 2s steps(25),
+    blink-caret .75s step-end infinite;
+  animation-delay: 600ms;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 25em; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #ff00c1; }
+}
